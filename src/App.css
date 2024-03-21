@@ -1,0 +1,85 @@
+/* Default styles for larger screens */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  background-color: #f4f4f4;
+  width: 200px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+  color: #333;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 160px;
+  }
+
+  .main {
+    padding: 0.5rem;
+  }
+}
+
+/* Small devices (landscape phones, 768px and under) */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    order: 1; /* Bring main content to the top */
+  }
+}
+
+/* Extra small devices (portrait phones, 576px and under) */
+@media (max-width: 576px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .sidebar ul li a {
+    padding: 0.5rem;
+  }
+}
